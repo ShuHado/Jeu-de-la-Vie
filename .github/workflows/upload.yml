@@ -4,6 +4,7 @@ on: push
 
 jobs:
     deploy:
+        runs-on: ubuntu-22.04
         name: "Deploy to Netlify"
         steps:
             - uses: jsmrcaga/action-netlify-deploy@v2.0.0
