@@ -12,5 +12,5 @@ jobs:
               with:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET }}
                   NETLIFY_DEPLOY_TO_PROD: true
-                  NETLIFY_SITE_ID: 655d0826-c8a8-4983-abd6-4b4e7224a2ea
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
                   build_directory: ./dist
