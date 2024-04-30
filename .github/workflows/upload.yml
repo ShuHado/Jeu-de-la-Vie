@@ -6,9 +6,10 @@ jobs:
     deploy:
         name: "Deploy to Netlify"
         runs-on: ubuntu-22.04
+        environment: netlify
         steps:
             - uses: actions/checkout@v3
-            - run: echo ${{ netlify.SECRET }}
+            - run: echo ${{ secrets.SECRET }}
             - uses: jsmrcaga/action-netlify-deploy@v2.0.0
               with:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET }}
